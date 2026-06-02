@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Nobile:400,500');
+
+:root {
+    --border-color: #000000;
+    --vanilla: #f0e4d0;
+    --chocolate: #553c13;
+    --size: 0.4;
+}
+
+html,
+body {
+    overflow: hidden;
+    background-color: #c3dffd;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 425px;
+    border: 10px solid var(--border-color);
+    box-shadow: inset 10px 0 15px rgba(0, 0, 0, .1);
+    background: rgb(230, 240, 230);
+}
+
+.card .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card p {
+    font-size: 0.8em;
+    line-height: 1.4;
+    font-family: 'Nobile', sans-serif;
+    color: #331717;
+    text-align: center;
+    margin: 4% 8%;
+}
+
+#opener {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#happy {
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 3em;
+    left: 42%;
+    transform: translateX(-50%);
+    top: 15%;
+}
+
+#birthday {
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 3em;
+    left: 42%;
+    transform: translateX(-50%);
+    bottom: 15%;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0 0 -10px;
+    border: 10px solid var(--border-color);
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transition: all .8s ease-in-out;
+}
+
+.card .front {
+    backface-visibility: hidden;
+    background: #5b7b8e;
+    background-size: contain;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.card:hover .front {
+    transform: perspective(800px) rotateY(-170deg);
+    background-color: rgb(65, 113, 141);
+}
+
+.card .back {
+    backface-visibility: visible;
+    transform: perspective(800px) rotateY(0deg);
+    background: rgb(230, 240, 230);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+}
+
+.card:hover .back {
+    transform: perspective(800px) rotateY(-170deg);
+    background: rgb(210, 220, 210);
+    box-shadow:
+        7px 0 5px rgba(0, 0, 0, .3),
+        inset 2px 0 15px rgba(0, 0, 0, .1);
+}
+
+.cake {
+    position: absolute;
+    width: calc(250px * var(--size));
+    height: calc(200px * var(--size));
+    top: 45%;
+    left: 50%;
+    margin-top: calc(-70px * var(--size));
+    margin-left: calc(-125px * var(--size));
+}
+
+.cake>* {
+    position: absolute;
+}
+
+.layer {
+    display: block;
+    width: calc(250px * var(--size));
+    height: calc(100px * var(--size));
+    border-radius: 50%;
+    background: var(--chocolate);
+
+    box-shadow:
+        0 2px #61471a,
+        0 4px #4d3611,
+        0 6px #4a330f,
+        0 8px #472f0e,
+        0 10px #442d0d,
+        0 12px #412a0c,
+        0 14px #3e270b,
+        0 16px #3b250a,
+        0 18px #382209,
+        0 20px #351f08;
+}
+
+.layer-top {
+    top: 0;
+}
+
+.layer-middle {
+    top: calc(33px * var(--size));
+}
+
+.layer-bottom {
+    top: calc(66px * var(--size));
+}
+
+.icing {
+    top: calc(2px * var(--size));
+    left: calc(5px * var(--size));
+    width: calc(240px * var(--size));
+    height: calc(90px * var(--size));
+    border-radius: 50%;
+    background: var(--vanilla);
+}
+
+.icing::before {
+    content: "";
+    position: absolute;
+    inset: 4px 5px 6px 5px;
+    border-radius: 50%;
+    background: #f5ead8;
+    box-shadow: 0 0 4px #f8eee0;
+}
+
+.drip {
+    width: calc(50px * var(--size));
+    height: calc(60px * var(--size));
+    background: var(--vanilla);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.drip1 {
+    top: calc(55px * var(--size));
+    left: calc(5px * var(--size));
+    transform: skewY(15deg);
+}
+
+.drip2 {
+    top: calc(75px * var(--size));
+    left: calc(181px * var(--size));
+    transform: skewY(-15deg);
+}
+
+.drip3 {
+    top: calc(84px * var(--size));
+    left: calc(90px * var(--size));
+    width: calc(80px * var(--size));
+}
+
+.candle {
+    background: #bf737d;
+    width: calc(16px * var(--size));
+    height: calc(50px * var(--size));
+    top: calc(-20px * var(--size));
+    left: 50%;
+    margin-left: calc(-8px * var(--size));
+}
+
+.candle::before {
+    content: "";
+    position: absolute;
+    width: calc(16px * var(--size));
+    height: calc(8px * var(--size));
+    border-radius: 50%;
+    background: #d08b94;
+}
+
+.flame {
+    position: absolute;
+    background: orange;
+    width: calc(15px * var(--size));
+    height: calc(35px * var(--size));
+    top: calc(-34px * var(--size));
+    left: 50%;
+    margin-left: calc(-7.5px * var(--size));
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    animation: flicker 1s infinite ease-in-out;
+}

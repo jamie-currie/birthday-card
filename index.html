@@ -2,12 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday</title>
+
+    <!-- Open Graph / WhatsApp preview -->
+    <meta property="og:title" content="You've got birthday mail ✉️" />
+    <meta property="og:description" content="Open your envelope..." />
+    <meta property="og:image" content="https://jamie-currie.github.io/birthday-card/envelope-preview.png" />
+    <meta property="og:url" content="https://jamie-currie.github.io/birthday-card/" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Optional extras -->
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
-    <h1>Hello</h1>
-    <img src="/voucher.png" alt="Description of image">
+    <div class="card">
+      <div class="back"></div>
+      <div class="front">
+            <div class="cake">
+              <div class="layer layer-bottom"></div>
+              <div class="layer layer-middle"></div>
+              <div class="layer layer-top"></div>
+              <div class="icing"></div>
+              <div class="drip drip1"></div>
+              <div class="drip drip2"></div>
+              <div class="drip drip3"></div>
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+            </div>
+            <p id="happy">HAPPY</p>
+            <p id="birthday">BIRTHDAY</p>
+      </div>
+    
+      <div class="text-container">
+        <p id="opener">🎉 Happy Birthday 🎉</p>
+      <p>
+        I know gifts aren’t really your thing so I wanted to make you something "handmade" to 
+        show how much I care. As I cant give you something in person, I built this mini site.
+        <br><br>
+        All to say happy birthday, hope you have a lovely day and I've made a voucher for next time you're home.
+        <br><br>
+        <a href="voucher.png">Click here for your voucher</a>
+      </p>
+        <p>Lots of love<br>Jamie, Beth and Norah<br>xxx</p>
+      </div>
+    </div>
   </body>
 </html>
+
+
