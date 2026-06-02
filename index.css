@@ -9,10 +9,13 @@
 
 html,
 body {
+    margin: 0;
     overflow: hidden;
     background-color: #c3dffd;
     width: 100%;
-    height: 100vh;
+    min-height: 100dvh;
+    /* dynamic viewport height */
+
     display: flex;
     justify-content: center;
     align-items: center;
