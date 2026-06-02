@@ -16,6 +16,7 @@
     <!-- Optional extras -->
     <meta name="twitter:card" content="summary_large_image" />
   </head>
+
   <body>
     <div class="card">
       <div class="back"></div>
@@ -49,6 +50,12 @@
         <p>Lots of love<br>Jamie, Beth and Norah<br>xxx</p>
       </div>
     </div>
+
+    <script>
+      setTimeout(() => {
+        document.querySelector('.card').classList.add('open');
+      }, 1000);
+    </script>
   </body>
 </html>
 

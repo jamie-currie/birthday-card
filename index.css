@@ -89,7 +89,7 @@ body {
     transform: perspective(800px) rotateY(0deg);
 }
 
-.card:hover .front {
+.card.open .front {
     transform: perspective(800px) rotateY(-170deg);
     background-color: rgb(65, 113, 141);
 }
@@ -101,7 +101,7 @@ body {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
 }
 
-.card:hover .back {
+.card.open .back {
     transform: perspective(800px) rotateY(-170deg);
     background: rgb(210, 220, 210);
     box-shadow:
